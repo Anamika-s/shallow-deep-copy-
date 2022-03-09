@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+      
+      <label for="txtComments"> Enter Feedbakc Comments </label>
+      <input type="text" id="txtComments"/>
+
+
+  </div>
+  <button type="button" onclick="AddFeedback()"> Add Feedback </button>
+  <button type="button" onclick="DisplayFeedback()"> Display Feedback </button>
+    <script>
+      var Feedback = new Array();
+   function AddFeedback()
+   {
+     var feedback = document.getElementById("txtComments").value;
+      Feedback.push(feedback);
+      console.log(Feedback.length);
+   }
+   function DisplayFeedback()
+   {
+     for(var i=0;i<Feedback.length;i++)
+     {
+       console.log(Feedback[i]);
+     }
+   }
+    </script>
+</body>
+</html>
