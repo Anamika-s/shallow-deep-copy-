@@ -44,6 +44,7 @@ function getName(name , callback)
   {
   console.log("Inside GetName"); callback(name);
   }, 2000)
+  
 };
 getName("Deepak" , (name)=>
 {

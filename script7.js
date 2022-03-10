@@ -29,15 +29,22 @@ function Insert()
  var data = { "name" :"Anamika",
              "job" :"job1"
 };
- var obj =
- {
-   method:'post',
-   headers:{
-     'Content-Type':'application/json'
- },
- body:data
-  }
- fetch(url).then(response=>
+//  var obj =
+//  {
+//    method:'post',
+//    headers:{
+//      'Content-Type':'application/json'
+//  },
+//  body:data
+//   }
+ fetch(url,
+  {
+    method:'post',
+    headers:{
+      'Content-Type':'application/json'
+  },
+  body : JSON.stringify(data)
+  }).then(response=>
   {
      return response.json();
   }).then(data=>
